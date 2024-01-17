@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="Piedra_Papel_Tijera_Final:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Piedra_Papel_Tijera_Final_jar</output-path>
+    <root id="archive" name="Piedra_Papel_Tijera_Final.jar">
+      <element id="module-output" name="Piedra_Papel_Tijera_Final" />
+    </root>
+  </artifact>
+</component>
