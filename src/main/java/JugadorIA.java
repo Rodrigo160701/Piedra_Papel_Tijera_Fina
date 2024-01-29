@@ -1,6 +1,7 @@
 import java.util.Random;
 
 public class JugadorIA implements Jugador {
+
     @Override // con el Overrida llamamos a la Interface Jugador//
     public String getEleccion() {
         Random random = new Random();

@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class Juego {
+    public static int contador;
     public static void main(String[] args) {
         jugar();
     }
@@ -10,7 +11,7 @@ public class Juego {
         JugadorIA jugadorIA = new JugadorIA(); // Creamos  la instacia del JugadorIA
         int contadorGanadasJugador1 = 0;
         int contadorGanadasJugador2 = 0;
-        int contadorPartidas = 0;
+        contador = 0;
         while (!juegoTerminado) {
             int resultado = jugarRonda(new JugadorUsuario(), jugadorIA);
             if (resultado == 0) {
@@ -23,7 +24,7 @@ public class Juego {
                 contadorGanadasJugador2++;
             }
 
-            contadorPartidas++;
+            contador++;
 
             if (contadorGanadasJugador1 == 3 || contadorGanadasJugador2 == 3) {
                 juegoTerminado = true;
@@ -45,6 +46,7 @@ public class Juego {
         System.out.println("Resultados:");
         System.out.println("Jugador 1: " + contadorGanadasJugador1 + " victorias");
         System.out.println("Jugador 2: " + contadorGanadasJugador2 + " victorias");
+
     }//se encarga de imprimir los resultados finales del juego después de que se haya determinado un ganador o si se ha decidido terminar el juego//
     private static int jugarRonda(JugadorUsuario jugadorUsuario, JugadorIA jugadorIA) {
         String eleccionJugador1 = jugadorUsuario.getEleccion();
